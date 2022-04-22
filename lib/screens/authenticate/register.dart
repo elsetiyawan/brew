@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Register extends StatefulWidget {
+  final Function toggleView;
+  const Register({required this.toggleView});
+
   @override
   State<Register> createState() => _RegisterState();
 }
@@ -16,7 +19,15 @@ class _RegisterState extends State<Register> {
       appBar: AppBar(
         backgroundColor: Colors.brown[400],
         elevation: 0.0,
-        title: const Text('Sign In to Brew Crew'),
+        title: const Text('Sign Up to Brew Crew'),
+        actions: [
+          TextButton.icon(
+              onPressed: () {
+                widget.toggleView();
+              },
+              icon: const Icon(Icons.person),
+              label: const Text('Sign In'))
+        ],
       ),
       body: Container(
           padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 50),
