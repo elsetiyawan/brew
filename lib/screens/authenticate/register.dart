@@ -1,15 +1,11 @@
-// import 'package:brew/models/user.dart';
-// import 'package:brew/services/auth.dart';
 import 'package:flutter/material.dart';
 
-class SignIn extends StatefulWidget {
+class Register extends StatefulWidget {
   @override
-  State<SignIn> createState() => _SignInState();
+  State<Register> createState() => _RegisterState();
 }
 
-class _SignInState extends State<SignIn> {
-  // final AuthService _authService = AuthService();
-
+class _RegisterState extends State<Register> {
   String email = '';
   String password = '';
 
@@ -58,7 +54,7 @@ class _SignInState extends State<SignIn> {
                   // ignore: avoid_print
                   print(password);
                 },
-                child: const Text('Sign In'),
+                child: const Text('Sign Up'),
               )
             ],
           ))),
