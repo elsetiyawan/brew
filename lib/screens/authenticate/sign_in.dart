@@ -1,5 +1,4 @@
-// import 'package:brew/models/user.dart';
-// import 'package:brew/services/auth.dart';
+import 'package:brew/services/auth.dart';
 import 'package:flutter/material.dart';
 
 class SignIn extends StatefulWidget {
@@ -11,7 +10,7 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
-  // final AuthService _authService = AuthService();
+  final AuthService _authService = AuthService();
 
   String email = '';
   String password = '';
@@ -64,10 +63,8 @@ class _SignInState extends State<SignIn> {
               ),
               ElevatedButton(
                 onPressed: () async {
-                  // ignore: avoid_print
-                  print(email);
-                  // ignore: avoid_print
-                  print(password);
+                  await _authService.signInWithEmailAndPassword(
+                      email, password);
                 },
                 child: const Text('Sign In'),
               )
