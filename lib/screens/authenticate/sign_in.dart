@@ -1,3 +1,4 @@
+import 'package:brew/models/user.dart';
 import 'package:brew/services/auth.dart';
 import 'package:flutter/material.dart';
 
@@ -22,13 +23,13 @@ class _SignInState extends State<SignIn> {
         padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 50),
         child: ElevatedButton(
           onPressed: () async {
-            dynamic result = await _authService.signInAnon();
+            UserModel? result = await _authService.signInAnon();
             if (result == null) {
               // ignore: avoid_print
               print('error signin in');
             } else {
               // ignore: avoid_print
-              print(result);
+              print(result.uid);
             }
           },
           child: const Text('Sign In Anonimously'),
