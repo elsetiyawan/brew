@@ -1,3 +1,4 @@
+import 'package:brew/services/auth.dart';
 import 'package:flutter/material.dart';
 
 class Register extends StatefulWidget {
@@ -9,6 +10,9 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
+  final AuthService _authService = AuthService();
+  final _formKey = GlobalKey<FormState>();
+
   String email = '';
   String password = '';
 
@@ -32,43 +36,45 @@ class _RegisterState extends State<Register> {
       body: Container(
           padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 50),
           child: Form(
+              key: _formKey,
               child: Column(
-            children: [
-              const SizedBox(
-                height: 20,
-              ),
-              TextFormField(
-                onChanged: ((value) {
-                  setState(() {
-                    email = value;
-                  });
-                }),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              TextFormField(
-                obscureText: true,
-                onChanged: ((value) {
-                  setState(() {
-                    password = value;
-                  });
-                }),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              ElevatedButton(
-                onPressed: () async {
-                  // ignore: avoid_print
-                  print(email);
-                  // ignore: avoid_print
-                  print(password);
-                },
-                child: const Text('Sign Up'),
-              )
-            ],
-          ))),
+                children: [
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  TextFormField(
+                    onChanged: ((value) {
+                      setState(() {
+                        email = value;
+                      });
+                    }),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  TextFormField(
+                    obscureText: true,
+                    onChanged: ((value) {
+                      setState(() {
+                        password = value;
+                      });
+                    }),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  ElevatedButton(
+                    onPressed: () async {
+                      await _authService
+                          .registerWithEmailAndPassword(email, password);
+                    },
+                    child: const Text('Sign Up'),
+                  )
+                ],
+              ))),
     );
   }
 }
+
+
+// need to work on the validation

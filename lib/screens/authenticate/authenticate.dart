@@ -24,3 +24,5 @@ class _AuthenticateState extends State<Authenticate> {
     }
   }
 }
+
+// think how to handle the firebase error
