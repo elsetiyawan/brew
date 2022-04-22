@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "378499733744",
+    "project_id": "klinikkoding",
+    "storage_bucket": "klinikkoding.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:378499733744:android:f3db40d70b3ff993e50a35",
+        "android_client_info": {
+          "package_name": "com.klinikkoding.brew"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "378499733744-e3lmguvevgmi5bvb2ug679jludr1v9s8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFaUTHeJrOyQu2VViPlvzyWYHcZpkL29Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "378499733744-e3lmguvevgmi5bvb2ug679jludr1v9s8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:378499733744:android:42311847c6c618d3e50a35",
+        "android_client_info": {
+          "package_name": "com.klinikkoding.brew_crew"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "378499733744-e3lmguvevgmi5bvb2ug679jludr1v9s8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFaUTHeJrOyQu2VViPlvzyWYHcZpkL29Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "378499733744-e3lmguvevgmi5bvb2ug679jludr1v9s8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
