@@ -1,4 +1,5 @@
 import 'package:brew/services/auth.dart';
+import 'package:brew/shared/constants.dart';
 import 'package:flutter/material.dart';
 
 class SignIn extends StatefulWidget {
@@ -41,6 +42,7 @@ class _SignInState extends State<SignIn> {
                 height: 20,
               ),
               TextFormField(
+                decoration: textInputDecoration.copyWith(hintText: 'Email'),
                 onChanged: ((value) {
                   setState(() {
                     email = value;
@@ -51,6 +53,7 @@ class _SignInState extends State<SignIn> {
                 height: 20,
               ),
               TextFormField(
+                decoration: textInputDecoration.copyWith(hintText: 'Password'),
                 obscureText: true,
                 onChanged: ((value) {
                   setState(() {

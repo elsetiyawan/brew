@@ -1,4 +1,5 @@
 import 'package:brew/services/auth.dart';
+import 'package:brew/shared/constants.dart';
 import 'package:flutter/material.dart';
 
 class Register extends StatefulWidget {
@@ -43,6 +44,7 @@ class _RegisterState extends State<Register> {
                     height: 20,
                   ),
                   TextFormField(
+                    decoration: textInputDecoration.copyWith(hintText: 'Email'),
                     onChanged: ((value) {
                       setState(() {
                         email = value;
@@ -53,6 +55,7 @@ class _RegisterState extends State<Register> {
                     height: 20,
                   ),
                   TextFormField(
+                    decoration: textInputDecoration.copyWith(hintText: 'Password'),
                     obscureText: true,
                     onChanged: ((value) {
                       setState(() {
@@ -65,8 +68,8 @@ class _RegisterState extends State<Register> {
                   ),
                   ElevatedButton(
                     onPressed: () async {
-                      await _authService
-                          .registerWithEmailAndPassword(email, password);
+                      await _authService.registerWithEmailAndPassword(
+                          email, password);
                     },
                     child: const Text('Sign Up'),
                   )
